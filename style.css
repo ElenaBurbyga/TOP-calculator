@@ -1,0 +1,82 @@
+
+main {
+  height: 650px;
+  width: 330px;
+  background-color: black;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content:center;
+  align-items:center;
+}
+
+.monitor {
+  height: 200px;
+  width: 250px;
+  background-color: inherit;
+  color: white;
+  position: relative;
+}
+
+.output {
+  font-family: Roboto;
+  font-weight: Light;
+  font-size: 45px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.buttons-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content:center;
+}
+
+.bottom-buttons {
+  display: flex;
+  gap: 10px
+}
+
+.cal-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  border-style: none;
+  font-size: 20px;
+}
+
+.zero-button {
+  height: 60px;
+  width: 130px;
+  border-radius: 60px;
+  border-style: none;
+  text-align:left;
+  padding-left: 23px;
+}
+
+.light-button {
+  background-color: #cfcfce;
+}
+.orange-button {
+  background-color: #ec8b03;
+  color: white;
+}
+.dark-button {
+  background-color: #444444;
+  color: white;
+}
+
+.light-button:active {
+  background-color: #ededed;
+}
+
+.orange-button:active {
+  background-color: #fcd6a1;
+}
+
+.dark-button:active {
+  background-color: #b4b4b4;
+}
