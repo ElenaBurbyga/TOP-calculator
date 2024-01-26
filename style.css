@@ -1,3 +1,9 @@
+:root {
+  --button-height: 60px;
+  --button-border-radius: 60px;
+  --flex-gap: 10px;
+  --white-font: white;
+}
 
 main {
   height: 650px;
@@ -6,7 +12,7 @@ main {
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--flex-gap);
   justify-content:center;
   align-items:center;
 }
@@ -15,7 +21,7 @@ main {
   height: 200px;
   width: 250px;
   background-color: inherit;
-  color: white;
+  color:var(--white-font);
   position: relative;
 }
 
@@ -31,27 +37,27 @@ main {
 .buttons-set {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--flex-gap);
   justify-content:center;
 }
 
 .bottom-buttons {
   display: flex;
-  gap: 10px
+  gap: var(--flex-gap);
 }
 
 .cal-button {
-  height: 60px;
+  height: var(--button-height);
   width: 60px;
-  border-radius: 60px;
+  border-radius: var(--button-border-radius);
   border-style: none;
   font-size: 20px;
 }
 
 .zero-button {
-  height: 60px;
+  height: var(--button-height);
   width: 130px;
-  border-radius: 60px;
+  border-radius: var(--button-border-radius);
   border-style: none;
   text-align:left;
   padding-left: 23px;
@@ -62,11 +68,11 @@ main {
 }
 .orange-button {
   background-color: #ec8b03;
-  color: white;
+  color: var(--white-font);
 }
 .dark-button {
   background-color: #444444;
-  color: white;
+  color: var(--white-font);
 }
 
 .light-button:active {
