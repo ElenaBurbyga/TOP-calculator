@@ -3,6 +3,11 @@ let result;
 let lastValue;
 let lastValueType;
 
+const formulaParser = () => {
+  const [num1, oper, num2] = formula.split(' ')
+  return [num1, oper, num2]
+}
+
 const storeValue = event => {
   const type = event.target.getAttribute('type')
   const value = event.target.getAttribute('value')
@@ -13,6 +18,10 @@ const storeValue = event => {
       formula += value; 
     } else if (formula && type === 'number' && lastValueType === 'operator') {
       formula = formula + ' ' + value;
+    } else if (formula && type === 'operator' && lastValueType === 'operator') {
+      let [num1, oper, num2] = formulaParser()
+      oper = value
+      formula = num1 + ' ' + oper
     } else {
       result = eval(formula);
       formula = String(result) + ' ' + value;
@@ -27,7 +36,6 @@ const storeValue = event => {
 const getResult = () => {
   result = eval(formula);
   formula = '';
-  // console.log(result)
   updateScreenResult();
 }
 
@@ -35,11 +43,6 @@ const AC = () => {
   result = '';
   formula = '';
   clearScreen();
-}
-
-const formulaParser = () => {
-  const [num1, oper, num2] = formula.split(' ')
-  return [num1, oper, num2]
 }
 
 const computePercentage = () => {
