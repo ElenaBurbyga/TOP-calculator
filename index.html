@@ -14,10 +14,10 @@
         <span class="output"></span>
       </div>
       <div class="buttons-set">
-        <button class="cal-button light-button ac">AC</button>
-        <button class="cal-button light-button negative">&#x2b;/&#x2212;</button>
-        <button class="cal-button light-button persentage">&#x25;</button>
-        <button class="cal-button orange-button" type="operator" onclick="storeValue(event)" value='\'>&#xf7;</button>
+        <button class="cal-button light-button ac" onclick='AC()'>AC</button>
+        <button class="cal-button light-button negative" onclick='flipSign()'>&#x2b;/&#x2212;</button>
+        <button class="cal-button light-button persentage" onclick='computePercentage()'>&#x25;</button>
+        <button class="cal-button orange-button" type="operator" onclick="storeValue(event)" value='/'>&#xf7;</button>
         <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='7'>7</button>
         <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='8' type="number">8</button>
         <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='9'>9</button>
