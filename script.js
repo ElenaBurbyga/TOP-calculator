@@ -74,6 +74,14 @@ const flipSign = () => {
   }
 }
 
-const updateScreenFormula = () => document.querySelector('.output').innerHTML = formula;
+const updateScreenFormula = () => {
+  if (formula.length >= 10) {
+    getResult()
+    updateScreenResult()
+  } else {
+  document.querySelector('.output').innerHTML = formula;
+  }
+}
+
 const updateScreenResult = () => document.querySelector('.output').innerHTML = result;
 const clearScreen = () => document.querySelector('.output').innerHTML = '';
