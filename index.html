@@ -9,31 +9,32 @@
   </head>
   <body>
     <main>
+      <script src="script.js" defer></script>
       <div class="monitor">
-        <span class="output">12345</span>
+        <span class="output"></span>
       </div>
       <div class="buttons-set">
-        <button class="cal-button light-button">AC</button>
-        <button class="cal-button light-button">&#x2b;/&#x2212;</button>
-        <button class="cal-button light-button">&#x25;</button>
-        <button class="cal-button orange-button">&#xf7;</button>
-        <button class="cal-button dark-button">7</button>
-        <button class="cal-button dark-button">8</button>
-        <button class="cal-button dark-button">9</button>
-        <button class="cal-button orange-button">&#xd7;</button>
-        <button class="cal-button dark-button">4</button>
-        <button class="cal-button dark-button">5</button>
-        <button class="cal-button dark-button">6</button>
-        <button class="cal-button orange-button">&#x2212;</button>
-        <button class="cal-button dark-button">1</button>
-        <button class="cal-button dark-button">2</button>
-        <button class="cal-button dark-button">3</button>
-        <button class="cal-button orange-button">&#x2b;</button>
+        <button class="cal-button light-button ac" onclick='AC()'>AC</button>
+        <button class="cal-button light-button negative" onclick='flipSign()'>&#x2b;/&#x2212;</button>
+        <button class="cal-button light-button persentage" onclick='computePercentage()'>&#x25;</button>
+        <button class="cal-button orange-button" type="operator" onclick="storeValue(event)" value='/'>&#xf7;</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='7'>7</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='8' type="number">8</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='9'>9</button>
+        <button class="cal-button orange-button" type="operator" onclick="storeValue(event)" value='*'>&#xd7;</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='4'>4</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='5'>5</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='6'>6</button>
+        <button class="cal-button orange-button" type="operator" onclick="storeValue(event)" value='-' >&#x2212;</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='1'>1</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='2'>2</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='3'>3</button>
+        <button class="cal-button orange-button" type="operator" onclick="storeValue(event)" value='+'>&#x2b;</button>
       </div>
       <div class="bottom-buttons">
-        <button class="cal-button zero-button dark-button">0</button>
-        <button class="cal-button dark-button">.</button>
-        <button class="cal-button orange-button">&#x3d;</button>
+        <button class="cal-button zero-button dark-button" type="number" onclick="storeValue(event)" value='0'>0</button>
+        <button class="cal-button dark-button" type="number" onclick="storeValue(event)" value='.'>.</button>
+        <button class="cal-button orange-button" onclick='getResult()'>&#x3d;</button>
       </div>
     </main>
   </body>
